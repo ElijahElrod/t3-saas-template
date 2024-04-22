@@ -22,7 +22,7 @@ export const posts = createTable(
   "post",
   {
     id: serial("id").primaryKey(),
-    userId: varchar("userId", { length: 256}),
+    userId: varchar("userId", { length: 256 }),
     name: varchar("name", { length: 256 }),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
@@ -33,3 +33,20 @@ export const posts = createTable(
     nameIndex: index("name_idx").on(example.name),
   })
 );
+
+
+export const users = createTable(
+  "users",
+  {
+    id: varchar("id").primaryKey(),
+    email: varchar("email", { length: 50 })
+      .notNull()
+      .unique(),
+    stripeCustomerId: varchar("stripeCustomerId", { length: 256 }),
+    stripeSubscriptionId: varchar("stripeSubscriptionId", { length: 256 }),
+    createdAt: timestamp("created_at")
+      .default(sql`CURRENT_TIMESTAMP`)
+      .notNull(),
+    updatedAt: timestamp("updatedAt"),
+  }
+)

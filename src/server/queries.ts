@@ -1,6 +1,7 @@
 import 'server-only';
 import { db } from './db';
 import { auth } from '@clerk/nextjs/server';
+import { users } from './db/schema';
 
 /**
  * Template Query to base future queries from, 
@@ -19,4 +20,11 @@ export async function getTemplateQuery() {
     });
     return tmp;
 
+}
+
+
+export type NewUser = typeof users.$inferInsert;
+
+export async function createUser(user: NewUser) {
+    return await db.insert(users).values(user);
 }
