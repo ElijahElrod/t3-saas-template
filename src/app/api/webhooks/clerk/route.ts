@@ -6,12 +6,6 @@ import { WebhookEvent } from '@clerk/nextjs/server';
 import { stripe } from '~/lib/stripe';
 import { type NewUser, createUser } from '~/server/queries';
 
-export const config = {
-    api: {
-        bodyParser: false
-    },
-}
-
 // TODO: Switch this for CLERK WEBHOOK SECRET when building
 const secret = env.STRIPE_WEBHOOK_SECRET;
 

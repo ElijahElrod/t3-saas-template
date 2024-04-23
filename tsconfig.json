@@ -37,6 +37,6 @@
     "**/*.cjs",
     "**/*.js",
     ".next/types/**/*.ts"
-, "src/app/global-error.tsx"  ],
+, "src/app/global-error.tsx", "src/app/blog/[slug]/page.tsx", "next.config.mjs"  ],
   "exclude": ["node_modules"]
 }

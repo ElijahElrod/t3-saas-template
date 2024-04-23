@@ -8,19 +8,20 @@ import { users } from './db/schema';
  * uses auth check to get per-user data
  * 
  * @returns user data
- */
+ *
+
 export async function getTemplateQuery() {
 
     const user = auth();
 
     if (!user.userId) throw new Error("Unauthorized");
 
-    const tmp = await db.query.posts.findMany({
+    const tmp = await db.query.users.findMany({
         where: (model, { eq }) => eq(model.userId, user.userId)
     });
     return tmp;
-
 }
+*/
 
 
 export type NewUser = typeof users.$inferInsert;

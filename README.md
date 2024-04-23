@@ -12,11 +12,12 @@
 
 ## TODO
 - [x] Add Storybook support for UI Workshopping
-- [ ] Make it deploy (w/ Vercel)
-- [ ] Actually set up a database (w/ Supabase or Vercel PG)
+- [x] Make it deploy (w/ Vercel)
+- [x] Actually set up a database (w/ Supabase or Vercel PG)
 - [ ] Attach to UI
 - [ ] Add Payments (w/ Stripe)
-- [ ] Add auth ( w/ Clerk)
-- [ ] Error Mgmt (w/ Sentry)
-- [ ] Analytics (w/ Posthog)
+- [x] Add Shadcn-UI 
+- [x] Add auth ( w/ Clerk)
+- [x] Error Mgmt (w/ Sentry)
+- [x] Analytics (w/ Posthog)
 - [ ] Ratelimit (w/ Upstash)
