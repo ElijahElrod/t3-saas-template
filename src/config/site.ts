@@ -10,4 +10,8 @@ export const siteConfig: SiteConfig = {
         twitter: "https://twitter.com/shadcn",
         github: "https://github.com/shadcn/taxonomy",
     },
+    subscription: {
+        monthly: '29',
+        annual: '290'
+    }
 }

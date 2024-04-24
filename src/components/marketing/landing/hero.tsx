@@ -1,4 +1,6 @@
+import AnimatedButton from "~/components/animated/button";
 import { Button } from "~/components/ui/button";
+import { siteConfig } from "~/config/site";
 
 
 export default function Hero() {
@@ -18,9 +20,21 @@ export default function Hero() {
                     </h1>
                     <div>
                         <p className="text-lg text-base-content-secondary leading-relaxed">
-                            ByeDispute monitors fraudulent activity to prevent chargebacks from stolen credit cards, unusual payment activity, or even spammers.
+                            {siteConfig.description}
                         </p>
-                        <ul className="hidden md:block text-base-content-secondary leading-relaxed space-y-1 mt-4"><li className="flex items-center justify-center lg:justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>1-minute no-code setup</li><li className="flex items-center justify-center lg:justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>Up to 80% less disputes</li><li className="flex items-center justify-center lg:justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>Save $15 dispute fees</li></ul>
+                        <ul className="hidden md:block text-base-content-secondary leading-relaxed space-y-1 mt-4">
+                            <li className="flex items-center justify-center lg:justify-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>
+                                1-minute no-code setup
+                            </li>
+                            <li className="flex items-center justify-center lg:justify-start gap-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
+                                    <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>Up to 80% less disputes</li><li className="flex items-center justify-center lg:justify-start gap-2"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd">
+                                    </path></svg>
+                                Save $15 dispute fees
+                            </li>
+                        </ul>
 
                     </div>
                     <Button className="">

@@ -21,7 +21,7 @@ export default function MarketingHeaderNav() {
                     </span>
                 </Link>
                 <Link
-                    href="#"
+                    href="/#pricing"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                 >
                     Pricing
@@ -47,7 +47,7 @@ export default function MarketingHeaderNav() {
                 </SheetTrigger>
                 <SheetContent side="left">
                     <nav className="grid gap-6 text-lg font-medium">
-                      
+
                         <SignedOut>
                             <SignInButton />
                         </SignedOut>

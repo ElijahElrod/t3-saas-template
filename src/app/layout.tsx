@@ -29,7 +29,7 @@ export default function RootLayout({
         <html lang="en">
           <body
             className={cn(
-              "font-sans antialiased",
+              "font-sans antialiased dark",
               fontSans.variable,
               fontSans.variable
             )}

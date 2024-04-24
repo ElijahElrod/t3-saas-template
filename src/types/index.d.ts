@@ -6,6 +6,10 @@ export type SiteConfig = {
     links: {
       twitter: string
       github: string
+    },
+    subscription: {
+      monthly: string,
+      annual: string
     }
   }
   
