@@ -67,6 +67,5 @@ import {
         ></path>
       </svg>
     ),
-    twitter: Twitter,
     check: Check,
   }

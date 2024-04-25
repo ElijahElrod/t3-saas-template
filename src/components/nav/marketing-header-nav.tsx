@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet"
 import { Button } from "../ui/button"
-import { Menu } from "lucide-react"
-import { Icons } from "~/components/icons/icons"
+import { CommandIcon, Menu } from "lucide-react"
 import { siteConfig } from "~/config/site"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
@@ -13,7 +12,7 @@ export default function MarketingHeaderNav() {
 
             <nav className="hidden flex-col itmes-center justify-between gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
                 <Link href="/" className="hidden items-center space-x-2 md:flex">
-                    <Icons.logo />
+                    <CommandIcon />
                     <span className="hidden font-bold sm:inline-block">
                         {siteConfig.name}
                     </span>
