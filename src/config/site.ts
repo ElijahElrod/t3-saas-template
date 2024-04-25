@@ -1,21 +1,21 @@
 import { SiteConfig } from "~/types"
 
 export const siteConfig: SiteConfig = {
-    name: "T3_Template",
+    name: "OpenBookClub",
     metadata: {
-        tagline: "Tagline"
+        tagline: "Join or Host your book club instantly"
     },
     description:
-        "An open source application built using the new router, server components and everything new in Next.js 13.",
-    url: "https://tx.shadcn.com",
+        "An open source community app for bookworms/wyrms to join community-based book clubs or host their own with friends.",
+    url: "https://openbookclub.com",
     ogImage: "https://tx.shadcn.com/og.jpg",
     links: {
         twitter: "https://twitter.com/shadcn",
         github: "https://github.com/shadcn/taxonomy",
     },
     subscription: {
-        monthly: '29',
-        annual: '24'
+        monthly: '4.99',
+        annual: '3.99'
     },
     subscriptionId: {
         monthly: 'monthly',
@@ -26,9 +26,9 @@ export const siteConfig: SiteConfig = {
         checkout: '/api/stripe/checkout'
     },
     features: [
-        "Feature 1",
-        "Feature 2",
-        "Feature 3",
-        "Feature 4"
+        "100% Ad-Free",
+        "Host/Join Private Book Clubs",
+        "Mod powers* (For your clubs, or by invite)",
+        
     ]
 }

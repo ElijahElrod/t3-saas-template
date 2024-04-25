@@ -27,7 +27,7 @@ export default function Pricing() {
                     <h3 className="text-xl font-bold sm:text-2xl">
                         What&apos;s included in your plan
                     </h3>
-                    <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-1">
+                    <ul className="grid gap-3 text-md font-semibold text-foreground sm:grid-cols-1">
                         {siteConfig.features.map((feature, ind) => {
                             return (
                                 <li key={`feature-${ind}`} className="flex items-center justify-center lg:justify-start gap-2">

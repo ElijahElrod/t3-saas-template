@@ -1,7 +1,7 @@
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet"
 import { Button } from "../ui/button"
-import { CommandIcon, Menu, Package2, Search } from "lucide-react"
+import { BookAIcon, CommandIcon, Menu, Package2, Search } from "lucide-react"
 import { Input } from "../ui/input"
 import { UserButton } from "@clerk/nextjs"
 import { siteConfig } from "~/config/site"
@@ -14,7 +14,7 @@ export default function AuthedHeaderNav() {
                     href="#"
                     className="flex items-center gap-2 text-lg font-semibold md:text-base"
                 >
-                    <CommandIcon className="h-6 w-6" />
+                    <BookAIcon className="h-6 w-6" />
                     <span className="sr-only">{siteConfig.name}</span>
                 </Link>
                 <Link

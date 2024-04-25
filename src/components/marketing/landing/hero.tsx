@@ -12,11 +12,12 @@ export default function Hero() {
                 {/* Hero Copy, Description, Quick bullets, CTA Button, Trust Element (# of Customers) */}
                 <div className="flex flex-col gap-10 lg:gap-14 items-center justify-center text-center lg:text-left lg:items-start">
                     <h1 className="font-medium text-4xl lg:text-5xl tracking-tight md:-mb-4 flex flex-col">
-                        <span>{"Don't let a "}
-                            <span className="font-black italic tracking-normal">dispute</span>
+                        <span>{"A universally "}
+                            <span className="font-black italic tracking-normal text-yellow-200">cozy</span>
+                            {" space "}
                         </span>
-                        <span>{"get you "}
-                            <span className="font-black italic text-red-500 tracking-normal">banned</span>
+                        <span>{"for the book"}
+                            <span className="font-black italic text-red-500 tracking-normal">wyrms</span>
                         </span>
                     </h1>
                     <div>
@@ -27,12 +28,12 @@ export default function Hero() {
                             <li className="flex items-center justify-center lg:justify-start gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
                                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd"></path></svg>
-                                1-minute no-code setup
+                                Free to Join
                             </li>
                             <li className="flex items-center justify-center lg:justify-start gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
                                     <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd"></path></svg>
-                                Up to 80% less disputes
+                                Vote For The Next Books!
                             </li>
                             <li className="flex items-center justify-center lg:justify-start gap-2">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500"><path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd">

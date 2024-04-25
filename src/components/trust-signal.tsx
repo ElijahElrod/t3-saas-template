@@ -16,7 +16,6 @@ export default function TrustSignal() {
                         )
                     })
                 }
-
             </div>
             <div className="flex flex-col justify-center items-center md:items-start gap-1">
                 <div className="rating flex flex-row">
@@ -26,7 +25,7 @@ export default function TrustSignal() {
                     </svg>
                 </div>
                 <div className="text-base text-base-content/80">
-                    <span className="font-semibold text-base-content">763</span> solopreneurs ship safe
+                    <span className="font-semibold text-base-content">763</span> Readers Club Safe
                 </div>
             </div>
 

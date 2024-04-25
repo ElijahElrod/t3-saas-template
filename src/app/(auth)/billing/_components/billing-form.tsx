@@ -72,9 +72,9 @@ export default function BillingForm({ customer, subscription }: BillingFormProps
         return (
 
             <div className="space-y-6 container">
-                <div>
-                    <h3 className="text-lg font-medium">Billing</h3>
-                    <p className="text-sm text-muted-foreground">
+                <div className="p-4">
+                    <h3 className="text-4xl font-medium">Billing</h3>
+                    <p className="text-lg text-muted-foreground">
                         Manage your subscription here
                     </p>
                 </div>
@@ -183,7 +183,7 @@ export default function BillingForm({ customer, subscription }: BillingFormProps
                                                                         <Switch id="annual-billing" checked={annualChecked} onClick={() => setAnnualChecked(!annualChecked)} />
                                                                         <Label htmlFor="annual-billing">Annual Plan</Label>
                                                                     </div>
-                                                                    <h4 className="text-7xl font-bold">${annualChecked ? siteConfig.subscription.annual : `${siteConfig.subscription.monthly}/month`}</h4>
+                                                                    <h4 className="text-4xl font-bold">${annualChecked ? `${siteConfig.subscription.annual}/m` : `${siteConfig.subscription.monthly}/m`}</h4>
                                                                     <div>
                                                                         <p className="text-sm font-medium text-muted-foreground ">
                                                                             Billed {annualChecked ? 'Annually' : 'Monthly'}
