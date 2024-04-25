@@ -6,8 +6,7 @@ import { WebhookEvent } from '@clerk/nextjs/server';
 import { stripe } from '~/lib/stripe';
 import { type NewUser, createUser } from '~/server/queries';
 
-// TODO: Switch this for CLERK WEBHOOK SECRET when building
-const secret = env.STRIPE_WEBHOOK_SECRET;
+const secret = env.CLERK_WEBHOOK_SECRET;
 
 export async function POST(req: any) {
 
