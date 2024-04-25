@@ -1,10 +1,8 @@
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet"
 import { Button } from "../ui/button"
-import { CircleUser, Menu, Package2, Search } from "lucide-react"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "../ui/dropdown-menu"
-import { Input } from "../ui/input"
-import { Icons } from "../icons/icons"
+import { Menu } from "lucide-react"
+import { Icons } from "~/components/icons/icons"
 import { siteConfig } from "~/config/site"
 import { SignInButton, SignedIn, SignedOut, UserButton } from "@clerk/nextjs"
 
