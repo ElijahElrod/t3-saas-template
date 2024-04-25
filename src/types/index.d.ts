@@ -1,5 +1,8 @@
 export type SiteConfig = {
     name: string
+    metadata: {
+        tagline: string
+    }
     description: string
     url: string
     ogImage: string
@@ -18,5 +21,7 @@ export type SiteConfig = {
     paths: {
         billing: string,
         checkout: string
-    }
+    },
+    features: string[]
+    
 }

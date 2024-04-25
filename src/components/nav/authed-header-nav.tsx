@@ -1,8 +1,7 @@
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet"
 import { Button } from "../ui/button"
-import { CircleUser, CommandIcon, Menu, Package2, Search } from "lucide-react"
-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "../ui/dropdown-menu"
+import { CommandIcon, Menu, Package2, Search } from "lucide-react"
 import { Input } from "../ui/input"
 import { UserButton } from "@clerk/nextjs"
 import { siteConfig } from "~/config/site"
@@ -19,10 +18,16 @@ export default function AuthedHeaderNav() {
                     <span className="sr-only">{siteConfig.name}</span>
                 </Link>
                 <Link
-                    href="#"
+                    href="/dashboard"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                 >
                     Dashboard
+                </Link>
+                <Link
+                    href="/billing"
+                    className="text-muted-foreground transition-colors hover:text-foreground"
+                >
+                    Billing
                 </Link>
             </nav>
             <Sheet>
@@ -46,12 +51,17 @@ export default function AuthedHeaderNav() {
                             <span className="sr-only">Acme Inc</span>
                         </Link>
                         <Link
-                            href="#"
+                            href="/dashboard"
                             className="text-muted-foreground transition-colors hover:text-foreground"
                         >
                             Dashboard
                         </Link>
-
+                        <Link
+                            href="/billing"
+                            className="text-muted-foreground transition-colors hover:text-foreground"
+                        >
+                            Billing
+                        </Link>
 
                     </nav>
                 </SheetContent>

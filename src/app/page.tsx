@@ -1,6 +1,3 @@
-"use client";
-
-import Link from "next/link";
 import FAQs from "~/components/marketing/landing/faq";
 import Features from "~/components/marketing/landing/features";
 import { SiteFooter } from "~/components/marketing/landing/footer";
@@ -19,7 +16,6 @@ export default function HomePage() {
       <FAQs />
       <Testimonails />
       <SiteFooter />
-
     </div>
   );
 }

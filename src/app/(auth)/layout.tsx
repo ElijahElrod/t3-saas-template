@@ -2,7 +2,7 @@
 import AuthedHeaderNav from "~/components/nav/authed-header-nav";
 import { TooltipProvider } from "~/components/ui/tooltip";
 
-export default function DashboardLayout({ children,
+export default function AuthLayout({ children,
 }: {
     children: React.ReactNode;
 }) {
@@ -12,7 +12,6 @@ export default function DashboardLayout({ children,
                 <AuthedHeaderNav />
                 {children}
             </div>
-
         </TooltipProvider>
     )
 }

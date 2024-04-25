@@ -39,14 +39,6 @@ const billingFormSchema = z.object({
     annual_plan: z.boolean().default(false),
 });
 
-const pricingFeatures: string[] = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3",
-    "Feature 4"
-]
-
-
 
 const CHECKOUT_SESSION_API_ENDPOINT = siteConfig.paths.checkout;
 const BILLING_PORTAL_REDIRECT_ENDPOINT = siteConfig.paths.billing;
@@ -171,7 +163,7 @@ export default function BillingForm({ customer, subscription }: BillingFormProps
                                                                     What&apos;s included in your plan
                                                                 </h3>
                                                                 <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-1">
-                                                                    {pricingFeatures.map((feature, ind) => {
+                                                                    {siteConfig.features.map((feature, ind) => {
                                                                         return (
                                                                             <li key={`feature-${ind}`} className="flex items-center justify-center lg:justify-start gap-2">
                                                                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
@@ -191,13 +183,10 @@ export default function BillingForm({ customer, subscription }: BillingFormProps
                                                                         <Switch id="annual-billing" checked={annualChecked} onClick={() => setAnnualChecked(!annualChecked)} />
                                                                         <Label htmlFor="annual-billing">Annual Plan</Label>
                                                                     </div>
-                                                                    <h4 className="text-7xl font-bold">${annualChecked ? siteConfig.subscription.annual : siteConfig.subscription.monthly}</h4>
+                                                                    <h4 className="text-7xl font-bold">${annualChecked ? siteConfig.subscription.annual : `${siteConfig.subscription.monthly}/month`}</h4>
                                                                     <div>
                                                                         <p className="text-sm font-medium text-muted-foreground ">
                                                                             Billed {annualChecked ? 'Annually' : 'Monthly'}
-                                                                        </p>
-                                                                        <p className="text-sm font-medium text-muted-foreground ">
-                                                                            {annualChecked ? '2 Months Free!' : ''}
                                                                         </p>
                                                                     </div>
 

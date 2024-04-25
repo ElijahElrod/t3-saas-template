@@ -1,5 +1,25 @@
 import { getPost } from "~/server/post-loader";
 import { notFound } from "next/navigation";
+import type { Metadata, ResolvingMetadata } from "next";
+import { siteConfig } from "~/config/site";
+
+
+type MetaDataProps = {
+    params: { slug: string }
+}
+
+export async function generateMetadata(
+    { params }: MetaDataProps,
+    parent: ResolvingMetadata
+): Promise<Metadata> {
+
+    const post = await getPost(params.slug)
+
+
+    return {
+        title: `${siteConfig.name} Blog`
+    }
+}
 
 export default async function BlogPost({
     params,

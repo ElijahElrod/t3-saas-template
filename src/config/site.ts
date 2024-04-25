@@ -2,6 +2,9 @@ import { SiteConfig } from "~/types"
 
 export const siteConfig: SiteConfig = {
     name: "T3_Template",
+    metadata: {
+        tagline: "Tagline"
+    },
     description:
         "An open source application built using the new router, server components and everything new in Next.js 13.",
     url: "https://tx.shadcn.com",
@@ -12,7 +15,7 @@ export const siteConfig: SiteConfig = {
     },
     subscription: {
         monthly: '29',
-        annual: '290'
+        annual: '24'
     },
     subscriptionId: {
         monthly: 'monthly',
@@ -21,5 +24,11 @@ export const siteConfig: SiteConfig = {
     paths: {
         billing: '/api/stripe/portal',
         checkout: '/api/stripe/checkout'
-    }
+    },
+    features: [
+        "Feature 1",
+        "Feature 2",
+        "Feature 3",
+        "Feature 4"
+    ]
 }

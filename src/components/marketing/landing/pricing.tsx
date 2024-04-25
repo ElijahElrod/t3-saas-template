@@ -1,4 +1,5 @@
-import { Icons } from "~/components/icons/icons";
+"use client";
+
 import { useState } from "react";
 import { Switch } from "~/components/ui/switch";
 import { Label } from "~/components/ui/label";
@@ -7,12 +8,6 @@ import { cn } from "~/lib/utils";
 import { buttonVariants } from "~/components/ui/button";
 import { siteConfig } from "~/config/site";
 
-const pricingFeatures: string[] = [
-    "Feature 1",
-    "Feature 2",
-    "Feature 3",
-    "Feature 4"
-]
 
 
 export default function Pricing() {
@@ -33,7 +28,7 @@ export default function Pricing() {
                         What&apos;s included in your plan
                     </h3>
                     <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-1">
-                        {pricingFeatures.map((feature, ind) => {
+                        {siteConfig.features.map((feature, ind) => {
                             return (
                                 <li key={`feature-${ind}`} className="flex items-center justify-center lg:justify-start gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
@@ -42,8 +37,6 @@ export default function Pricing() {
                                 </li>
                             )
                         })}
-
-
                     </ul>
                 </div>
                 <div className="flex flex-col gap-4 text-center">
@@ -53,7 +46,7 @@ export default function Pricing() {
                             <Switch id="annual-billing" checked={annualChecked} onClick={() => setAnnualChecked(!annualChecked)} />
                             <Label htmlFor="annual-billing">Annual Plan</Label>
                         </div>
-                        <h4 className="text-7xl font-bold">${annualChecked ? siteConfig.subscription.annual : siteConfig.subscription.monthly}</h4>
+                        <h4 className="text-4xl font-bold">${annualChecked ? `${siteConfig.subscription.annual}/m` : `${siteConfig.subscription.monthly}/m`}</h4>
                         <div>
                             <p className="text-sm font-medium text-muted-foreground ">
                                 Billed {annualChecked ? 'Annually' : 'Monthly'}
