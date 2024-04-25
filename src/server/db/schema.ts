@@ -23,11 +23,15 @@ export const users = createTable(
   "users",
   {
     id: varchar("id").primaryKey(),
+    name: varchar("name", { length: 256 })
+      .notNull(),
     email: varchar("email", { length: 50 })
       .notNull()
       .unique(),
-    stripeCustomerId: varchar("stripeCustomerId", { length: 256 }),
-    stripeSubscriptionId: varchar("stripeSubscriptionId", { length: 256 }),
+    stripeCustomerId: varchar("stripeCustomerId", { length: 256 })
+      .notNull(),
+    stripeSubscriptionId: varchar("stripeSubscriptionId", { length: 256 })
+      .default(''),
     createdAt: timestamp("created_at")
       .default(sql`CURRENT_TIMESTAMP`)
       .notNull(),

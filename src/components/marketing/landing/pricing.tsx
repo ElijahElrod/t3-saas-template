@@ -33,11 +33,11 @@ export default function Pricing() {
                         What&apos;s included in your plan
                     </h3>
                     <ul className="grid gap-3 text-sm text-muted-foreground sm:grid-cols-1">
-                        {pricingFeatures.map((feature) => {
+                        {pricingFeatures.map((feature, ind) => {
                             return (
-                                <li className="flex items-center justify-center lg:justify-start gap-2">
+                                <li key={`feature-${ind}`} className="flex items-center justify-center lg:justify-start gap-2">
                                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-[18px] h-[18px] text-green-500">
-                                        <path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clip-rule="evenodd"></path></svg>
+                                        <path fillRule="evenodd" d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z" clipRule="evenodd"></path></svg>
                                     {feature}
                                 </li>
                             )

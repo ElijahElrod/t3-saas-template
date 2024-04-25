@@ -13,5 +13,13 @@ export const siteConfig: SiteConfig = {
     subscription: {
         monthly: '29',
         annual: '290'
+    },
+    subscriptionId: {
+        monthly: 'monthly',
+        annual: 'annual'
+    },
+    paths: {
+        billing: '/api/stripe/portal',
+        checkout: '/api/stripe/checkout'
     }
 }

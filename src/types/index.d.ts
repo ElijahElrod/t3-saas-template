@@ -4,12 +4,19 @@ export type SiteConfig = {
     url: string
     ogImage: string
     links: {
-      twitter: string
-      github: string
+        twitter: string
+        github: string
     },
     subscription: {
-      monthly: string,
-      annual: string
+        monthly: string,
+        annual: string
+    },
+    subscriptionId: {
+        monthly: string,
+        annual: string
+    },
+    paths: {
+        billing: string,
+        checkout: string
     }
-  }
-  
+}

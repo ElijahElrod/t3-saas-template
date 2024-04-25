@@ -1,9 +1,11 @@
 import Link from "next/link"
 import { Sheet, SheetTrigger, SheetContent } from "../ui/sheet"
 import { Button } from "../ui/button"
-import { CircleUser, Menu, Package2, Search } from "lucide-react"
+import { CircleUser, CommandIcon, Menu, Package2, Search } from "lucide-react"
 import { DropdownMenu, DropdownMenuTrigger, DropdownMenuLabel, DropdownMenuContent, DropdownMenuSeparator, DropdownMenuItem } from "../ui/dropdown-menu"
 import { Input } from "../ui/input"
+import { UserButton } from "@clerk/nextjs"
+import { siteConfig } from "~/config/site"
 
 export default function AuthedHeaderNav() {
     return (
@@ -13,38 +15,14 @@ export default function AuthedHeaderNav() {
                     href="#"
                     className="flex items-center gap-2 text-lg font-semibold md:text-base"
                 >
-                    <Package2 className="h-6 w-6" />
-                    <span className="sr-only">Acme Inc</span>
+                    <CommandIcon className="h-6 w-6" />
+                    <span className="sr-only">{siteConfig.name}</span>
                 </Link>
                 <Link
                     href="#"
                     className="text-muted-foreground transition-colors hover:text-foreground"
                 >
                     Dashboard
-                </Link>
-                <Link
-                    href="#"
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                    Orders
-                </Link>
-                <Link
-                    href="#"
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                    Products
-                </Link>
-                <Link
-                    href="#"
-                    className="text-muted-foreground transition-colors hover:text-foreground"
-                >
-                    Customers
-                </Link>
-                <Link
-                    href="#"
-                    className="text-foreground transition-colors hover:text-foreground"
-                >
-                    Settings
                 </Link>
             </nav>
             <Sheet>
@@ -69,31 +47,12 @@ export default function AuthedHeaderNav() {
                         </Link>
                         <Link
                             href="#"
-                            className="text-muted-foreground hover:text-foreground"
+                            className="text-muted-foreground transition-colors hover:text-foreground"
                         >
                             Dashboard
                         </Link>
-                        <Link
-                            href="#"
-                            className="text-muted-foreground hover:text-foreground"
-                        >
-                            Orders
-                        </Link>
-                        <Link
-                            href="#"
-                            className="text-muted-foreground hover:text-foreground"
-                        >
-                            Products
-                        </Link>
-                        <Link
-                            href="#"
-                            className="text-muted-foreground hover:text-foreground"
-                        >
-                            Customers
-                        </Link>
-                        <Link href="#" className="hover:text-foreground">
-                            Settings
-                        </Link>
+
+
                     </nav>
                 </SheetContent>
             </Sheet>
@@ -108,22 +67,7 @@ export default function AuthedHeaderNav() {
                         />
                     </div>
                 </form>
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="secondary" size="icon" className="rounded-full">
-                            <CircleUser className="h-5 w-5" />
-                            <span className="sr-only">Toggle user menu</span>
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Settings</DropdownMenuItem>
-                        <DropdownMenuItem>Support</DropdownMenuItem>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Logout</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+                <UserButton />
             </div>
         </header>
     )

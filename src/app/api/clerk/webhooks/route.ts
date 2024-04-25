@@ -30,6 +30,7 @@ export async function POST(req: any) {
 
             const newUser: NewUser = {
                 id: whEvent.data.id,
+                name: whEvent.data.first_name + " " + whEvent.data.first_name,
                 email: stripeCustomer.email!,
                 stripeCustomerId: stripeCustomer.id,
                 stripeSubscriptionId: ''
