@@ -22,7 +22,7 @@ export interface CreateCheckoutParams {
 export type StringObject = Record<string, string>
 
 
-export const stripe = new Stripe(env.STRIPE_API_KEY, {
+export const stripe = new Stripe(env.STRIPE_SECRET_KEY, {
     apiVersion: "2024-04-10",
     typescript: true,
 })
